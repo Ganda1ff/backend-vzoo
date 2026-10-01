@@ -1,0 +1,16 @@
+spring:
+  main:
+    banner-mode: off
+  application:
+    name: vzoo-server
+
+logging:
+  level:
+    ru.ulstu.is.server.*: DEBUG
+
+springdoc:
+  open-api:
+    info:
+      title: V-ZOO REST API
+      description: REST API for the V-ZOO online zoo laboratory work 1
+      version: 1.0.0

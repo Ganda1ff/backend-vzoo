@@ -1,0 +1,29 @@
+V-ZOO — КАК ЗАПУСТИТЬ
+=====================
+
+1) Распакуйте архив в обычную папку, например:
+   C:\Projects\vzoo_lab1_spring
+
+2) В VS Code выберите File -> Open Folder и откройте именно папку
+   vzoo_lab1_spring (корень проекта, где лежит build.gradle).
+
+3) Установите JDK 21 и Node.js, если они ещё не установлены.
+
+4) Первый терминал VS Code, из КОРНЯ проекта:
+   .\gradlew.bat bootRun
+
+   После запуска:
+   http://localhost:8080/swagger-ui/index.html
+
+5) Второй терминал VS Code:
+   cd front
+   npm install
+   npm run dev
+
+6) Откройте сайт:
+   http://localhost:5173
+
+Нужно, чтобы оба терминала одновременно продолжали работать.
+json-server больше не нужен.
+
+Подробности находятся в README.md.

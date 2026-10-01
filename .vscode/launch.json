@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Server",
+            "request": "launch",
+            "mainClass": "ru.ulstu.is.server.ServerApplication"
+        }
+    ]
+}

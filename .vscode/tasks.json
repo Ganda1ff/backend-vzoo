@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "V-ZOO: backend",
+            "type": "shell",
+            "windows": {
+                "command": ".\\gradlew.bat bootRun"
+            },
+            "linux": {
+                "command": "./gradlew bootRun"
+            },
+            "osx": {
+                "command": "./gradlew bootRun"
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "V-ZOO: frontend",
+            "type": "shell",
+            "command": "npm run dev",
+            "options": {
+                "cwd": "${workspaceFolder}/front"
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        }
+    ]
+}

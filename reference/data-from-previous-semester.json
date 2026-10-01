@@ -1,0 +1,116 @@
+{
+  "habitats": [
+    {
+      "id": "1",
+      "name": "Вольер редких животных"
+    },
+    {
+      "id": "2",
+      "name": "Лесная зона"
+    },
+    {
+      "id": "3",
+      "name": "Тропический павильон"
+    },
+    {
+      "id": "4",
+      "name": "Водная зона"
+    }
+  ],
+  "diets": [
+    {
+      "id": "1",
+      "name": "Насекомые и водные беспозвоночные"
+    },
+    {
+      "id": "2",
+      "name": "Фрукты, ягоды и небольшие животные"
+    },
+    {
+      "id": "3",
+      "name": "Растительная пища"
+    },
+    {
+      "id": "4",
+      "name": "Рыба и морепродукты"
+    }
+  ],
+  "animals": [
+    {
+      "id": "1",
+      "name": "Выхухоль",
+      "description": "Редкое животное, занесённое в Красную книгу. Хорошо плавает и живёт рядом с водой.",
+      "image": "/images/animal1.png",
+      "habitatId": "1",
+      "dietId": "1"
+    },
+    {
+      "id": "2",
+      "name": "Енот",
+      "description": "Любопытный и дружелюбный зверёк, который любит фрукты и активные игры.",
+      "image": "/images/animal2.jpg",
+      "habitatId": "2",
+      "dietId": "2"
+    },
+    {
+      "id": "3",
+      "name": "Горилла",
+      "description": "Умное и сильное животное. В онлайн-зоопарке можно наблюдать за его повседневными привычками.",
+      "image": "/images/animal3.jpg",
+      "habitatId": "3",
+      "dietId": "3"
+    },
+    {
+      "name": "лоржойцукенгш",
+      "description": "фывапрол",
+      "image": "../images/animal7.png",
+      "habitatId": "1",
+      "dietId": "3",
+      "id": "gzzRKM2sJwc"
+    }
+  ],
+  "ticketTypes": [
+    {
+      "id": "adult",
+      "title": "Взрослый",
+      "price": 600,
+      "description": "Для посетителей от 18 лет"
+    },
+    {
+      "id": "child",
+      "title": "Детский",
+      "price": 300,
+      "description": "Для детей от 7 до 17 лет"
+    },
+    {
+      "id": "pension",
+      "title": "Льготный",
+      "price": 400,
+      "description": "Для пенсионеров и льготных категорий"
+    }
+  ],
+  "ticketOrders": [
+    {
+      "visitorName": "иван",
+      "email": "ivanrotov2020@gmail.com",
+      "ticketTypeId": "child",
+      "quantity": 1,
+      "visitDate": "2026-05-20",
+      "total": 300,
+      "createdAt": "2026-05-19T12:07:07.741Z",
+      "id": "rbRfxNpnIZo"
+    },
+    {
+      "visitorName": "иван",
+      "email": "ivanrotov2020@gmail.com",
+      "ticketTypeId": "adult",
+      "quantity": 1,
+      "visitDate": "2026-05-21",
+      "total": 600,
+      "createdAt": "2026-05-19T13:51:50.002Z",
+      "id": "HxEfM6jOmgk"
+    }
+  ],
+  "subscriptions": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}
