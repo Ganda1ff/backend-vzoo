@@ -1,4 +1,4 @@
-package ru.ulstu.is.server.api;
+package ru.ulstu.is.server.error;
 
 public record AdviceErrorBody(int status, String message) {
 }

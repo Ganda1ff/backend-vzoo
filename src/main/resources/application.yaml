@@ -12,5 +12,5 @@ springdoc:
   open-api:
     info:
       title: V-ZOO REST API
-      description: REST API for the V-ZOO online zoo laboratory work 1
-      version: 1.0.0
+      description: REST API for V-ZOO laboratory work 2 (multilayer architecture)
+      version: 2.0.0

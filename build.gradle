@@ -5,8 +5,8 @@ plugins {
 }
 
 group = "ru.ulstu.is"
-version = "1.0.0"
-description = "V-ZOO REST API server"
+version = "2.0.0"
+description = "V-ZOO REST API server - laboratory work 2"
 def targetJDK = JavaVersion.VERSION_21
 
 defaultTasks "bootRun"
@@ -37,6 +37,7 @@ ext {
 
 dependencies {
     implementation "org.springframework.boot:spring-boot-starter-webmvc"
+    implementation "org.springframework.boot:spring-boot-starter-validation"
     implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:${springdocVersion}"
 
     testImplementation "org.springframework.boot:spring-boot-starter-webmvc-test"

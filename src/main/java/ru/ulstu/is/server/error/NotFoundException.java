@@ -1,4 +1,4 @@
-package ru.ulstu.is.server.api;
+package ru.ulstu.is.server.error;
 
 public class NotFoundException extends RuntimeException {
     public NotFoundException(String entity, String id) {
