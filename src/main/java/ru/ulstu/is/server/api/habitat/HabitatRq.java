@@ -2,9 +2,10 @@ package ru.ulstu.is.server.api.habitat;
 
 import jakarta.validation.constraints.NotBlank;
 import ru.ulstu.is.server.entity.HabitatEntity;
+import jakarta.validation.constraints.Max;
 
 public record HabitatRq(
-        @NotBlank String name,
+        @NotBlank @Max(20) String name,
         @NotBlank String square,
         @NotBlank String climate) {
     public HabitatEntity toEntity() {

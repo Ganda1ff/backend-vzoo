@@ -4,10 +4,11 @@ import jakarta.validation.constraints.NotBlank;
 import ru.ulstu.is.server.entity.AnimalEntity;
 import ru.ulstu.is.server.entity.DietEntity;
 import ru.ulstu.is.server.entity.HabitatEntity;
+import jakarta.validation.constraints.Size;
 
 public record AnimalRq(
-        @NotBlank String name,
-        @NotBlank String description,
+        @NotBlank @Size(min = 2, max = 20) String name,
+        @NotBlank @Size(min = 10, max = 100) String description,
         @NotBlank String image,
         @NotBlank String habitatId,
         @NotBlank String dietId) {
