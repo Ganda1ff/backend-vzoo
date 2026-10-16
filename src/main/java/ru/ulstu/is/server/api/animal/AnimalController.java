@@ -1,6 +1,8 @@
 package ru.ulstu.is.server.api.animal;
 
 import java.util.List;
+import org.springframework.web.bind.annotation.RequestParam;
+import ru.ulstu.is.server.entity.HabitatAnimalStatsProjection;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,4 +41,8 @@ public class AnimalController {
 
     @DeleteMapping("/{id}")
     public AnimalRs delete(@PathVariable String id) { return animalService.delete(id); }
+    @GetMapping("/statistics")
+    public List<HabitatAnimalStatsProjection> statistics(@RequestParam(defaultValue = "") String climate) {
+        return animalService.getHabitatStatistics(climate);
+    }
 }

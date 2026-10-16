@@ -5,12 +5,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import ru.ulstu.is.server.api.tickettype.TicketTypeRq;
 import ru.ulstu.is.server.repository.TicketTypeRepository;
 import ru.ulstu.is.server.service.TicketTypeService;
 
 @SpringBootTest
+@Transactional
 class TicketTypeServiceTests {
     @Autowired TicketTypeService service;
     @Autowired TicketTypeRepository repository;

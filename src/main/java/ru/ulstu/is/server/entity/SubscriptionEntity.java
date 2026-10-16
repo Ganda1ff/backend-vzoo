@@ -1,5 +1,11 @@
 package ru.ulstu.is.server.entity;
 
+import jakarta.persistence.*;
+import java.util.Set;
+import java.util.HashSet;
+
+@Entity
+@Table(name = "subscription")
 public class SubscriptionEntity extends BaseEntity {
     private String name;
     private String email;

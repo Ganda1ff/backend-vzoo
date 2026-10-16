@@ -1,9 +1,7 @@
 package ru.ulstu.is.server.repository;
 
-import org.springframework.stereotype.Repository;
-
+import org.springframework.data.jpa.repository.JpaRepository;
 import ru.ulstu.is.server.entity.SubscriptionEntity;
 
-@Repository
-public class SubscriptionRepository extends MapRepository<SubscriptionEntity> {
+public interface SubscriptionRepository extends JpaRepository<SubscriptionEntity, String> {
 }

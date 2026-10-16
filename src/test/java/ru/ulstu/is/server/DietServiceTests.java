@@ -5,12 +5,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import ru.ulstu.is.server.api.diet.DietRq;
 import ru.ulstu.is.server.repository.DietRepository;
 import ru.ulstu.is.server.service.DietService;
 
 @SpringBootTest
+@Transactional
 class DietServiceTests {
     @Autowired DietService service;
     @Autowired DietRepository repository;

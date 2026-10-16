@@ -5,8 +5,8 @@ plugins {
 }
 
 group = "ru.ulstu.is"
-version = "2.0.0"
-description = "V-ZOO REST API server - laboratory work 2"
+version = "3.0.0"
+description = "V-ZOO REST API server - laboratory work 3"
 def targetJDK = JavaVersion.VERSION_21
 
 defaultTasks "bootRun"
@@ -40,6 +40,11 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-validation"
     implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:${springdocVersion}"
 
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa"
+    runtimeOnly "com.h2database:h2"
+    runtimeOnly "org.springframework.boot:spring-boot-h2console"
+
+    testImplementation "org.springframework.boot:spring-boot-starter-data-jpa-test"
     testImplementation "org.springframework.boot:spring-boot-starter-webmvc-test"
     testRuntimeOnly "org.junit.platform:junit-platform-launcher"
 }

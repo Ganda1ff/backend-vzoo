@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import ru.ulstu.is.server.api.animal.AnimalRq;
 import ru.ulstu.is.server.api.diet.DietRq;
@@ -17,6 +18,7 @@ import ru.ulstu.is.server.service.DietService;
 import ru.ulstu.is.server.service.HabitatService;
 
 @SpringBootTest
+@Transactional
 class AnimalServiceTests {
     @Autowired AnimalService service;
     @Autowired HabitatService habitatService;

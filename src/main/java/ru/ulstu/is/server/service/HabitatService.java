@@ -3,6 +3,7 @@ package ru.ulstu.is.server.service;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import ru.ulstu.is.server.api.habitat.HabitatRq;
 import ru.ulstu.is.server.api.habitat.HabitatRs;
@@ -16,17 +17,23 @@ public class HabitatService {
 
     public HabitatService(HabitatRepository repository) { this.repository = repository; }
 
+    @Transactional
     public HabitatEntity getEntity(String id) {
         return repository.findById(id).orElseThrow(() -> new NotFoundException("Habitat", id));
     }
+    @Transactional
     public List<HabitatRs> getAll() { return repository.findAll().stream().map(HabitatRs::fromEntity).toList(); }
+    @Transactional
     public HabitatRs get(String id) { return HabitatRs.fromEntity(getEntity(id)); }
+    @Transactional
     public HabitatRs create(HabitatRq dto) { return HabitatRs.fromEntity(repository.save(dto.toEntity())); }
+    @Transactional
     public HabitatRs update(String id, HabitatRq dto) {
         final HabitatEntity entity = getEntity(id);
         dto.applyTo(entity);
         return HabitatRs.fromEntity(repository.save(entity));
     }
+    @Transactional
     public HabitatRs delete(String id) {
         final HabitatEntity entity = getEntity(id);
         repository.delete(entity);

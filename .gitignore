@@ -73,3 +73,6 @@ testem.log
 Thumbs.db
 
 front/dist
+# Lab 3 H2 data
+data/*.mv.db
+data/*.trace.db

@@ -5,12 +5,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import ru.ulstu.is.server.api.subscription.SubscriptionRq;
 import ru.ulstu.is.server.repository.SubscriptionRepository;
 import ru.ulstu.is.server.service.SubscriptionService;
 
 @SpringBootTest
+@Transactional
 class SubscriptionServiceTests {
     @Autowired SubscriptionService service;
     @Autowired SubscriptionRepository repository;

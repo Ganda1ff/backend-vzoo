@@ -1,6 +1,7 @@
 package ru.ulstu.is.server.configuration;
 
 import org.springframework.stereotype.Component;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 
 import jakarta.annotation.PostConstruct;
 import ru.ulstu.is.server.api.animal.AnimalRq;
@@ -15,6 +16,7 @@ import ru.ulstu.is.server.service.TicketOrderService;
 import ru.ulstu.is.server.service.TicketTypeService;
 
 @Component
+@ConditionalOnProperty(name = "vzoo.seed-data", havingValue = "true", matchIfMissing = true)
 public class DataInitializer {
     private final HabitatService habitatService;
     private final DietService dietService;

@@ -1,6 +1,8 @@
 package ru.ulstu.is.server.api.ticketorder;
 
 import java.util.List;
+import org.springframework.web.bind.annotation.RequestParam;
+import ru.ulstu.is.server.entity.TicketSalesStatsProjection;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,4 +41,8 @@ public class TicketOrderController {
 
     @DeleteMapping("/{id}")
     public TicketOrderRs delete(@PathVariable String id) { return ticketOrderService.delete(id); }
+    @GetMapping("/statistics")
+    public List<TicketSalesStatsProjection> statistics(@RequestParam(defaultValue = "0000-01-01") String fromDate) {
+        return ticketOrderService.getSalesStatistics(fromDate);
+    }
 }

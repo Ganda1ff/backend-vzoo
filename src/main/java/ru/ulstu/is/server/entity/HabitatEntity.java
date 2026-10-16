@@ -1,6 +1,17 @@
 package ru.ulstu.is.server.entity;
 
+import jakarta.persistence.*;
+import java.util.Set;
+import java.util.HashSet;
+
+@Entity
+@Table(name = "habitat")
 public class HabitatEntity extends BaseEntity {
+    @OneToMany(mappedBy = "habitat", fetch = FetchType.LAZY)
+    private Set<AnimalEntity> animals = new HashSet<>();
+    public Set<AnimalEntity> getAnimals() { return animals; }
+    public void addAnimal(AnimalEntity animal) { animal.setHabitat(this); }
+    public void removeAnimal(AnimalEntity animal) { if (animal.getHabitat() == this) animal.setHabitat(null); }
     private String name;
     private String square;
     private String climate;
